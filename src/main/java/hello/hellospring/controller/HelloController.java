@@ -22,7 +22,7 @@ public class HelloController {
     }
 
     @GetMapping("hello-string")
-    @ResponseBody
+    @ResponseBody //http body에 데이터를 직접넣어줌
     public String helloString(@RequestParam("name") String name) {
         return "hello " + name;//"hello spring" 소스코드없이그대로 내려감
     }
@@ -30,7 +30,7 @@ public class HelloController {
     @ResponseBody
     public Hello helloApi(@RequestParam("name")String name){
         Hello hello = new Hello();
-        hello.setName(name);
+        hello.setName(name);//파라미터로 넘어온 name 
         return hello;
     }
 
