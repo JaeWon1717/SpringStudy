@@ -30,7 +30,7 @@ public class HelloController {
     @ResponseBody
     public Hello helloApi(@RequestParam("name")String name){
         Hello hello = new Hello();
-        hello.setName(name);//파라미터로 넘어온 name 
+        hello.setName(name);//파라미터로 넘어온 name
         return hello;
     }
 
